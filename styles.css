@@ -1,0 +1,685 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scrollbar-width: none;
+}
+footer {
+    backdrop-filter: blur(2px);
+    color: white;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.footer {
+    width: 100vw;
+    padding: 5px;
+}
+.footer > p {
+    font-size: 2rem;
+    width: 100vw;
+    font-family: Open Sans ,sans-serif;
+} 
+footer {
+    background: rgba(0, 0, 0, 0.6);
+    position: relative;
+    width: 100%;
+    float: left;
+    color: white;
+    padding: 1.5em; 
+    font-family: Open Sans ,sans-serif;
+}
+footer a {
+    color: #3498db;
+    font-weight: bolder;
+    font-family: Open Sans ,sans-serif;
+    }
+    
+footer a:hover {
+    text-decoration: underline;
+}
+@media screen and (max-width: 768px) {
+    .footer > p {
+        font-size: 1.5rem;
+    }
+}
+
+/* jobs.html */
+.jd {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.index {
+    font-family: Open Sans, sans-serif;
+    font-weight: 500;
+    background-image: url(images/vecteezy_abstract-plexus-tech-background-with-glowing-blue-shiny_21050150\ \(1\).gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    background: transparent;
+    backdrop-filter: blur(50px);
+    z-index: 100;
+}
+
+.logo {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.8rem;
+    letter-spacing: -1px;
+    color: white;
+    background: -webkit-linear-gradient(rgba(255,255,255,1), rgba(17,54,155,1));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0.5rem;
+    font-size: 5rem;
+}
+
+.menu {
+    font-size: 2rem;
+    margin-right: auto;
+}
+
+.menu > a {
+    padding-left: 3rem;
+    font-family: Open Sans ,sans-serif;
+}
+
+.menu > a:hover {
+    text-shadow: 2px 2px 10px white;
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    .index {
+        background-size: contain;
+    }
+    .navbar {
+        justify-content: center;
+    }
+
+    .logo {
+        font-size: 3.5rem;
+    }
+    .landingpage {
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .logo {
+        font-size: 3rem;
+    }
+
+    .menu > a {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .index {
+        background-size: contain;
+    }
+}
+
+
+
+/* index.html */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.landingpage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 60%;
+    height: 100vh;
+}
+
+.landingpage > h1 {
+    font-size: 5rem;
+}
+.landingpage > p {
+    font-size: 2rem;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between;
+    padding: 5rem;
+    background: rgb(20, 110, 222);
+    background: linear-gradient(72deg, rgba(20, 110, 222, 1) 38%, rgba(0, 0, 0, 1) 55%);
+    width: 100%;
+}
+
+.team,
+.company {
+    flex-basis: 100%; /* Each item takes full width initially */
+    padding: 0 2rem; /* Add some padding */
+    text-align: center; /* Center-align text */
+}
+
+.title {
+    font-size: 3.6rem;
+    font-weight: bolder;
+}
+
+.description {
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+img {
+    max-width: 100%; /* Make images responsive */
+    border-radius: 20px;
+    padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .team,
+    .company {
+        flex-basis: calc(50% - 4rem); /* Each item takes 50% of the container minus padding */
+        max-width: calc(50% - 4rem); /* Set maximum width for flexibility */
+    }
+}
+
+/* button animation */
+.button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    --primary-color: white;
+    --hovered-color: white;
+    position: relative;
+    display: flex;
+    font-weight: 600;
+    font-size: 20px;
+    align-items: center;
+    color: white;
+    display: inline-block;
+}
+
+.button::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    bottom: -7px;
+    background: var(--hovered-color);
+    height: 2px;
+    transition: 0.3s ease-out;
+}
+
+.button:hover::after {
+    width: 100%;
+}
+
+/* apply */
+
+.apply{
+  height: 180vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  position: relative;
+}
+.container{
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.input-box span {
+    font-size: 2rem;
+}
+.input-box label {
+    font-size: 1.5rem;
+}
+label span {
+    font-size: 1.5rem;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.content2 form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.select-option {
+    height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.select-option:focus,
+.select-option:valid {
+    border-color: #9b59b6;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #9b59b6;
+}
+ form .gender-details .gender-title{
+  font-size: 20px;
+  font-weight: 500;
+ }
+ form .category{
+   display: flex;
+   width: 100%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+ #dot-3:checked ~ .category label .three{
+   background: #9b59b6;
+   border-color: #d9d9d9;
+ }
+ form input[type="radio"]{
+   display: none;
+ }
+ form .button1{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button1 input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+ form .button1 input:hover{
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  }
+  textarea {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+  textarea:hover,
+  textarea:valid {
+    border-color: #9b59b6;
+  }
+  fieldset {
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content2 form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content2 .category{
+    flex-direction: column;
+  }
+}
+/* about */
+h1 {
+    color: white;
+    padding-top: 7rem;
+    text-align: center;
+    font-size: 5rem;
+    padding-bottom: 3rem;
+}
+.about {
+    font-family: Open Sans ,sans-serif;
+    font-weight: 500;
+    background: rgb(20,110,222);
+    background: linear-gradient(292deg, rgba(20,110,222,1) 43%, rgba(109,100,192,1) 76%);
+    padding-bottom: 5rem;
+}
+.jk {
+    float: right;
+    width: 30%;
+    border: 3px solid white;
+    padding-bottom: unset;
+}
+.kj {
+    float: left;
+    width: 30%;
+    border: 1px solid white;
+    padding-bottom: unset;
+    border: 3px solid white;
+}
+.div1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    color: white;
+    font-size: 3rem;
+}
+.div1 > dd {
+    padding-left: 20rem;
+}
+.div2 > dt {
+    padding-right: 10rem;
+}
+.div3 > dd {
+    padding-left: 20rem;
+}
+.div2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: column;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    color: white;
+    font-size: 3rem;
+}
+.div3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    color: white;
+    font-size: 3rem;
+}
+.ab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3rem;
+}
+.ac {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3rem;
+}
+
+.ms {
+    display: flex;
+    align-items: center;
+    padding-top: 7rem;
+    padding-left: 15rem;
+    padding-bottom: 3rem;
+    padding-right: 3rem;
+}
+table {
+    border: solid 3px black;
+    width: 80vw;
+    height: 80vh;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 1rem;
+    table-layout: fixed;
+    background: #F6F5F5;
+    opacity: 0.8;
+}
+td {
+    border: solid 1px black;
+    color: black;
+    font-size: 2rem;
+}
+th {
+    border: solid 1px black;
+    color: black;
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+td > p {
+    width: unset;
+}
+/* career */
+
+.jd {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+section {
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.aside {
+    width: 25%;
+    float: right;
+    border: 2px solid white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-right: 4rem;
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
+    width: 80%;
+}
+
+.ds {
+    margin-left: 5rem;
+    margin-right: 1rem;
+    width: 75%;
+    float: left;
+}
+
+.ds > p {
+    font-size: 2rem;
+}
+.jobtitle {
+    font-size: 4rem;
+}
+
+.subtitle {
+    font-size: 2.5rem;
+}
+
+.jobdescription {
+    font-size: 2rem;
+}
+
+.bulletpoint {
+    font-size: 1.7rem;
+    margin-left: 2rem;
+}
+
+.jobs {
+    font-family: Open Sans ,sans-serif;
+    font-weight: 500;
+    background: url('./images/andras-vas-Bd7gNnWJBkU-unsplash.png');
+    background-size: cover;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* log in */
+.login {
+    background: rgb(20,110,222);
+    background: radial-gradient(circle, rgba(20,110,222,1) 16%, rgba(56,49,122,1) 72%);
+    padding-bottom: 25rem;
+    padding-top: 10rem;
+    font-family: Open Sans ,sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 7rem;
+}
+
+.login-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+    font-size: 2rem;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+p.error {
+    color: red;
+    text-align: center;
+}
